@@ -1,0 +1,32 @@
+Topic: Source code vulnerability detection
+Difficulty: Hard
+Description: 
+Code vulnerability is a term related to the security of your software. It is a flaw in your code that creates a potential risk of compromising security. This flaw will allow hackers to take advantage of your code by attaching an endpoint to extract data, tamper your software or worse, erase everything. Early stage detection of code vulnerability can help avoid major security issues in the long run.
+
+The provided dataset contains labelled functions written in C as well as 5 vulnerabilities indications:
+- CWE-119: This vulnerability represents an improper restriction of operations within the bounds of a memory buffer (https://cwe.mitre.org/data/definitions/119.html)
+- CWE-120: This vulnerability represents a classic buffer overflow (https://cwe.mitre.org/data/definitions/120.html)
+- CWE-476 This vulnerability represents a NULL Pointer Dereference (https://cwe.mitre.org/data/definitions/476.html)
+- CWE-468: This vulnerability represent the use of pointer subtraction to determine size (https://cwe.mitre.org/data/definitions/469.html)
+- CWE-other: This represents a bulk of similar vulnerabilities.
+
+This problem is a kind of Natural Language Processing problem as you have to find a way to convert the source code, which are basically words, in a format that a supervised learning algorithm understands.
+The main difficulty is that a single function can have multiple vulnerabilities at the same time. You could have 5 different classification models, one for each vulnerability but this means training 5 models which will take way more time than training a single multiple output model. Therefore, we ask you to train only one classification model predicting all 5 vulnerabilities.
+
+Here are some resources that could help you:
+- An introduction to word embedding of texts : https://machinelearningmastery.com/what-are-word-embeddings/
+- A hands-on tutorial of the Doc2Vec model: https://towardsdatascience.com/multi-class-text-classification-with-doc2vec-logistic-regression-9da9947b43f4
+- Several classifiers defined by sklearn can perform multiple output classification. Check the fit method, if the y parameter has a definition as (n_samples, n_outputs), then multiple output classification is allowed.
+
+Goals:
+The goal of this challenge is to predict if a given function written in C presents a vulnerability
+
+Criteria: 
+This challenge will require you to have a model that can accurately predict the vulnerabilities.
+
+We will score your submissions based on F-1 score. A mean of the F-1 score of each vulnerability.
+
+A presentation of the method used by the winners will be requested. The code must also be given.
+- Accuracy
+- F1_score
+- Score

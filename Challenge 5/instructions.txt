@@ -1,0 +1,37 @@
+Topic: Stroke detection by CGI
+Difficulty: Easy
+Description:
+Every year, over one hundred thousand people are hit with a stroke. Sometimes called a brain attack, it occurs when something blocks blood supply to part of the brain or when a blood vessel in the brain bursts. In either case, parts of the brain become damaged or die. A stroke can cause lasting brain damage, long-term disability, or even death.
+
+The sooner a person receives treatment for a stroke, the less damage is likely to happen. Available retroactive data has, of course, given physicians and neurologists cues about which patients might be more at risk for stroke. However, moving to the diagnosis stage largely occurs while a stroke is happening when the patient shows signs of sudden numbness in one side of the body, sudden confusion, difficulty understanding speech and talking, dizziness and loss of coordination.
+
+Up to now, there have been very few reliable biomarkers that help neurologists distinguish which patients will suffer from a stroke in the future. However, taking a predictive approach to preventing the severity of a stroke has become a lot more feasible thanks to intensive research and testing into how Artificial Intelligence (AI) technologies might be best deployed in a healthcare setting. This allows us to work on preventative methods for strokes rather than caring for the side effects after it occurs.
+
+Using information gathered from over 5000 people, including their gender, age, glucose levels, heart disease history and BMI, your job is to build a machine learning model able to predict with high accuracy whether a person is likely to have a stroke in their lifetime.
+
+Goals:
+The provided dataset gives some information on each person:
+- ID: The person’s unique identifier, we use these for the test
+- Gender: the person’s sex
+- Age: the person’s age
+- Hypertension: whether that person has hypertension (1) or not (0)
+- Heart_disease: whether that person has a heart disease (1) or not (0)
+- Ever_married: whether that person is married (Yes) or not (No)
+- Work_type: the kind of job that person has
+- Residence_type: whether that person lives in a rural or urban environment
+- Avg_glucose_level: that person’s average glucose level
+- Bmi: that person’s body mass index
+- Smoking_status: that person’s smoking habits
+- Label: whether that person had a stroke (1) or not (0)
+
+Given that information, your task is to predict whether that person is at risk to have a stroke or not.
+
+Criteria: 
+We will score your submissions based on F1 score.
+
+This challenge will require you to have a model that can accurately predict the stroke.
+
+A presentation of the method used by the winners will be requested. The code must also be given.
+- Accuracy 
+- F1_score
+- Score

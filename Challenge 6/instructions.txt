@@ -1,0 +1,33 @@
+Topic: Does this plant have a disease?
+Difficulty: Hard
+Description:
+Plant pathology is the scientific study of diseases in plants caused by pathogens and environmental conditions. Plant diseases are a normal part of nature and one of many ecological factors that help keep the hundreds of thousands of living plants and animals in balance with one another. However, when tardily detected, and subsequently left untreated, they can be the cause of loss of crops for example. Plant disease may also result in hunger and starvation, especially in less-developed countries where access to disease-control methods is limited and annual losses of 30 to 50 percent are not uncommon for major crops.
+
+In this problem, you have to find a way to load and classify images.
+Here are a few resources that might help:
+- The basic library in python to load images: https://pillow.readthedocs.io/en/stable/reference/Image.html
+- IBM’s introduction to convolutional neural network https://www.ibm.com/cloud/learn/convolutional-neural-networks
+For this challenge you can use any library you want.
+
+The provided dataset contains images in 13 differents classes, which are:
+['Pepper bell Bacterial spot', 'Pepper bell healthy', 'Potato Early blight', 'Potato Late_blight', 'Potato healthy', 'Tomato Bacterial spot', 'Tomato Early blight', 'Tomato Late blight', 'Tomato Leaf Mold', 'Tomato Septoria leaf spot', 'Tomato Spider mites Two spotted spider mite', 'Tomato TargetSpot', 'Tomato Tomato YellowLeaf Curl Virus', 'Tomato Tomato mosaic virus', 'Tomato healthy']
+
+Given an image, your job is to predict which type of plant it is and if it is healthy or which type of disease it has.
+
+Goals:
+The purpose of this challenge is to identify a plant from an image and determine whether it is healthy or sick. We've introduced a new task to this challenge that puts contestants up against two sorts of images: clean and naturally degraded. To be more specific, we enhance the initial dataset of this challenge with naturally occurring distorted images in order to simulate real-world scenarios. This was accomplished by mimicking conservative transformations such as rotation, scale, brightness, and blur. Contestants, in this task, must design a reliable and robust DL model that can accurately detect these sorts of images.
+
+Criteria:
+We will score your submissions based on F1 score and Robustness. The score on the leadboard is the harmonic mean between the f1 score and the robustness score. The robustness is the f1 score of your prediction on disturb data.
+
+This challenge will require you to have a model that can accurately predict the disease of a plant and also be able to face robustness. To know more about robustness, please visit https://codeml.ca or here is an explanation.
+
+Testing large-scale DL systems with millions of neurons and thousands of parameters for all conceivable inputs is extremely difficult. DL testing is the process of running a DL system in order to discover vulnerabilities. These experiments on DL systems are intended to examine a variety of system properties. Robustness is one of the most studied properties in DL systems.
+
+Robustness refers to the DL system's ability to handle corner-case scenario input. A human, for example, can recognize a car even if it is raining and the view is hindered, while a DL system may make an erroneous prediction if similar image obstructions occur. For that purpose, the DL system must be trained to identify an input properly in the presence of such external perturbations. These test scenarios are known as 'corner-case scenarios,' and they help to improve the robustness of DL systems.
+
+A presentation of the method used by the winners will be requested. The code must also be given.
+- Accuracy
+- F1_score
+- Robustness
+- Score

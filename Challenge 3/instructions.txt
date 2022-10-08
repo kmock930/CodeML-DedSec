@@ -1,0 +1,37 @@
+Topic: Gun shot detection
+Difficulty: Medium
+Description:
+Have you ever woken up to a loud BANG and wondered whether it was fireworks, a gunshot, or even just the popping of a plastic bag? Let's say it is indeed a gun that was fired somewhere in your city. in the past there was a slim chance the shooting would be reported to police at all, even when it was, it took precious time and there was often confusion regarding the location of the shooting and other pertinent information, at least that's how things were before gunshot detection software. Now, advanced technology has automated the gunshot monitoring process, if a gun is fired in any area within shot spotter coverage the system detects locates and immediately alerts police of the gunshot.
+
+The sound is a 1D feature. The difficulty of this challenge is the imbalancement of data coupled with this 1D feature for which the length can vary a little.
+You should use libraries like librosa (https://librosa.org/doc/latest/feature.html) to extract useful features.
+An explanation of the meaning of the MFCC features can be found here : https://medium.com/prathena/the-dummys-guide-to-mfcc-aceab2450fd .
+
+The sound of a gunshot can sometimes easily be detected from an audio.
+The provided dataset contains 10385 sound excerpts (<=4s) of urban sounds.
+In total, there are 7079 training samples and 3306 testing samples.
+For each sample, you have a label which is either True or False (True if there is a gunshot and False if not).
+
+Goals:
+The goal of this challenge is to predict if a gunshot can be detected in an audio excerpt. To simulate real-world circumstances, we add a level of complexity to this problem. More specifically, we enrich the initial dataset of this task with audio extracts containing various background sounds. We injected two forms of background sounds: white noise and real-world backgrounds. Contestants must build an accurate and robust DL model capable of detecting all sorts of audio excerpts.
+
+The training csv file ('urbansound8k_train_gunshot.csv') has four columns:
+- slice_file_name - the name of the audio file
+- ID : The ID of the recording
+- fold : The fold number to which this file has been allocated.
+- Label (either True or False )
+
+Criteria:
+We will score your submissions based on F1 score and Robustness. The score on the leadboard is the harmonic mean between the f1 score and the robustness score. The robustness is the f1 score of your prediction on disturb data.
+
+This challenge will require you to have a model that can accurately detect the gun shot and also be able to face robustness. To know more about robustness, please visit https://codeml.ca or here is an explication.
+
+Testing large-scale DL systems with millions of neurons and thousands of parameters for all conceivable inputs is extremely difficult. DL testing is the process of running a DL system in order to discover vulnerabilities. These experiments on DL systems are intended to examine a variety of system properties. Robustness is one of the most studied properties in DL systems.
+
+Robustness refers to the DL system's ability to handle corner-case scenario input. A human, for example, can recognize a car even if it is raining and the view is hindered, while a DL system may make an erroneous prediction if similar image obstructions occur. For that purpose, the DL system must be trained to identify an input properly in the presence of such external perturbations. These test scenarios are known as 'corner-case scenarios,' and they help to improve the robustness of DL systems.
+
+A presentation of the method used by the winners will be requested. The code must also be given.
+- Accuracy 
+- F1_score
+- Robustness
+- Score

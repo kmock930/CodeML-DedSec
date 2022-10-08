@@ -1,0 +1,48 @@
+Topic: The recidivism.
+Difficulty: Easy
+Description:
+In 2014, A software whose job was to perform risk assessment, i.e. evaluate the likelihood of a person to commit a crime in the future, was discovered to be biased. Indeed, out of two very similar petty theft crimes made by a black woman and a white man, it predicted that the black woman was more likely to commit a new crime in the future. However, it turns out that software had it all wrong as the white man was the one to commit another crime not two years later. Your job is to work on similar data as was provided to that software and make a better job in order to build an unbiased classifier.
+
+Here are some resources that could help:
+- What is machine learning: https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained
+- Introduction to supervised machine learning: : https://www.explorium.ai/wiki/supervised-learning/
+- Further explanation about where this comes from: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing
+
+
+This problem is not a hard challenge in itself, you just have to pay attention not to induce any bias to your classifier. Therefore, the features are already given, and the task is a single output, binary prediction. This means that a simple model will give results right away but you’ll have to make your own checks to make sure the fairness is respected.
+
+Goals:
+The goal of this challenge is to predict if a convicted person is subject to commit another crime in the future or not.
+
+The provided dataset gives some information on each person. Unfortunately a complete explanation of each feature was never given but here’s what we could gather:
+- ID: The person’s unique identifier, we use these for the test
+- Name: the person’s full name
+- First: the person’s first name
+- Last: the person’s last name
+- Sex: the person’s sex
+- Dob: the person’s date of birth
+- Age: the person’s age
+- Age: the person’s age category
+- Race: the person’s race
+- Juv_fel_count: the number of juvenile felonies that person did
+- Juv_misd_count: the number of juvenile misdemeanours that person did
+- Juv_other_count: the number of other juvenile crimes that person did
+- Priors_count: the total number of previous crimes that person did
+- C_jail_in: The date when that person went to jail for the current crime
+- C_jail_out: The date when that person got out of jail for the current crime
+- C_case_number: the current crime case number
+- C_offense_date: the date when the current crime was committed
+- C_arrest_date: the date when that person was arrested
+- Is_recid: whether that person is a recidivist (1) or not (0)
+- Label: whether that person committed another crime afterwards (1) or not (0)
+
+Criteria:
+The score on the leadboard is the harmonic mean between the f1 score and the fairness score.
+
+This challenge will require you to have a model that can accurately predict if a prisoner will commit a crime again and take fairness into account. To know more about what fairness is, please visit https://codeml.ca. The calculation we use to measure the fairness of your model is the normalized disparate impact.
+
+A presentation of the method used by the winners will be requested. The code must also be given.
+- accuracy 
+- F1_score
+- Fairness
+- Score
